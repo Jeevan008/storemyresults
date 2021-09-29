@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result
+  </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 style="text-align: center;">RESULTS</h1>
+<table class="table table-dark" id="dis">
+  <thead>
+    <tr>
+      <th scope="col">USN</th>
+      <th scope="col">Name</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%data.forEach(data =>{ %>
+    <tr>
+      <th scope="row"><%=data.usn %></th>
+      <td><%=data.name %></td>
+      <td><%=data.subject%></td>
+      <td><%=data.marks %></td>
+    </tr>
+    <% }) %> 
+  </tbody>
+</table>
+<button type="button" value="Export" onclick="Export()" id="generatePDF" class="btn btn-success btn-lg" style="float: right; margin-right: 30px;">Print</button>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript">
+   function Export() {
+            html2canvas(document.getElementById('dis'), {
+                onrendered: function (canvas) {
+                    var data = canvas.toDataURL();
+                    var docDefinition = {
+                        content: [{
+                            image: data,
+                            width: 500
+                        }]
+                    };
+                    pdfMake.createPdf(docDefinition).download("Results.pdf");
+                }
+            });
+        }
+</script>
+</body>
+</html>

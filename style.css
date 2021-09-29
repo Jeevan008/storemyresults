@@ -1,0 +1,114 @@
+a.nav-link{
+    font-size: 26px;
+    margin-right: 25px;
+}
+
+label{
+    font-size: 28px;
+}
+
+.container
+{
+    width: 100%;
+    margin:auto;
+    padding-top: 2%;
+}
+
+h1.alter{
+    font-size: 70px;
+    margin:0;
+    margin-left: 25%; 
+    color: dodgerblue;
+}
+
+.para{
+     margin: 0;
+    font-size:30px;
+    text-align: justify;
+    line-height: 1.8;
+    margin-left:3%;
+    margin-top:4%;
+    margin-bottom:12%;
+    margin-right:3%;
+}
+
+footer{
+    background-color: lightgrey;
+    margin: 0;
+}
+
+
+ .footy{
+    padding-top: 0.5%;
+    padding-bottom:0.5%;
+    padding-left: 40%;
+}
+
+a.foot{
+    margin-right:5%;
+}
+
+.fa-facebook-square{
+    color: #3b5998;
+}
+
+.fa-instagram{
+    color: mediumvioletred;
+}
+
+.outer-footer {
+  padding-left: 37.5%;
+  padding-bottom:0.5%;   
+}
+
+body.fully{
+  background-color:#3d84b8;  
+    
+}
+
+.container2
+{
+    width: 100%;
+    margin:auto;
+    padding-top: 100px;
+}
+
+.card.input-card{
+    padding-top: 0px;
+}
+
+.l{
+    
+    text-decoration-line: none;
+    font-size: 40px; 
+    margin-left: 36%;
+}
+
+form.alter{
+    padding-left: 1%;
+    padding-right:1%;
+    
+}
+.card-body
+{
+   margin-top: 0px;
+   margin-bottom: 0px;
+   padding-bottom: 0px;
+}
+.alter{
+    padding-right: 0px;
+}
+#formGroupExampleInput{
+    border-radius: 10px;
+}
+.table{
+    padding-top: 100px;
+}
+#dis{
+   margin-top: 50px;
+
+}
+
+button.btn-primary{
+    float:right;
+} 
